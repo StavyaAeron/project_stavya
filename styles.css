@@ -1,0 +1,213 @@
+/* ------------------------- */
+/* CSS Reset & Basic Setup   */
+/* ------------------------- */
+:root {
+    --primary-color: #0056b3; /* Blue similar to the name */
+    --secondary-color: #4a4a4a; /* Dark grey for text */
+    --header-bg: #f0f0f0;      /* Light grey for section headers */
+    --border-color: #ddd;      /* Light border color */
+    --highlight-bg: #e7f3ff;   /* Light blue for highlights */
+    --body-bg: #f8f9fa;        /* Very light grey page background */
+    --container-bg: #ffffff;   /* White resume background */
+}
+
+/* Basic reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth; /* Smooth scrolling for potential nav links */
+}
+
+body {
+    font-family: 'Lato', sans-serif; /* Use Lato as the primary font */
+    line-height: 1.6;
+    color: var(--secondary-color);
+    background-color: var(--body-bg); /* Apply background to the whole page */
+    font-size: 16px; /* Base font size */
+}
+
+/* ------------------------- */
+/* Container & Layout        */
+/* ------------------------- */
+.resume-container {
+    max-width: 900px;
+    margin: 30px auto; /* Center the container with top/bottom margin */
+    padding: 30px;
+    background-color: var(--container-bg);
+    border: 1px solid var(--border-color);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08); /* Subtle shadow */
+    border-radius: 8px; /* Slightly rounded corners */
+}
+
+/* ------------------------- */
+/* Header Styling            */
+/* ------------------------- */
+.main-header {
+    /* Using Flexbox for layout */
+    display: flex;
+    justify-content: space-between; /* Pushes name/title left, university info right */
+    align-items: flex-start; /* Align items to the top */
+    padding-bottom: 20px;
+    border-bottom: 2px solid var(--primary-color);
+    margin-bottom: 30px;
+}
+
+#main-name { /* ID Selector */
+    font-family: 'Montserrat', sans-serif; /* Different font for the name */
+    font-size: 2.5em; /* Larger font size */
+    color: var(--primary-color);
+    margin-bottom: 5px;
+    font-weight: 700;
+}
+
+.program-info { /* Class Selector */
+    font-size: 1.1em;
+    color: #555;
+    font-weight: 600;
+}
+
+.header-right {
+    text-align: right; /* Align text to the right */
+}
+
+.department, .university { /* Grouping selectors */
+    font-size: 0.9em;
+    color: #666;
+}
+
+.university {
+    font-weight: bold;
+}
+
+
+/* ------------------------- */
+/* Section Styling           */
+/* ------------------------- */
+section {
+    margin-bottom: 30px; /* Spacing between sections */
+}
+
+section h2 { /* Element + Descendant Selector */
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.4em;
+    font-weight: 600;
+    color: var(--primary-color);
+    background-color: var(--header-bg); /* Light grey background */
+    padding: 8px 15px;
+    margin-bottom: 20px;
+    border-left: 5px solid var(--primary-color); /* Accent border */
+    text-transform: uppercase; /* Uppercase text like in the image */
+    letter-spacing: 1px;
+}
+
+/* ------------------------- */
+/* Specific Section Elements */
+/* ------------------------- */
+
+/* Academic Qualification Table */
+#academic-qualification table { /* ID + Descendant */
+    width: 100%;
+    border-collapse: collapse; /* Merge borders */
+}
+
+#academic-qualification th,
+#academic-qualification td {
+    border: 1px solid var(--border-color); /* Border for cells */
+    padding: 10px 12px; /* Cell padding */
+    text-align: left;
+    vertical-align: top;
+}
+
+#academic-qualification th {
+    background-color: var(--header-bg); /* Header background */
+    font-weight: bold;
+    font-size: 0.95em;
+}
+
+#academic-qualification td {
+    font-size: 0.9em;
+}
+
+.score { /* Class for styling scores */
+    font-weight: bold;
+    color: #333;
+}
+
+/* Internship, Achievements, Responsibility, Certs, Project */
+.entry {
+    margin-bottom: 20px; /* Space between entries within a section */
+}
+
+section h3 {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 3px;
+}
+
+.role {
+    font-size: 1em;
+    font-style: italic;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+section ul {
+    list-style-type: disc; /* Standard bullet points */
+    padding-left: 25px; /* Indent list */
+    margin-left: 10px; /* Add some margin to align better */
+}
+
+section li {
+    margin-bottom: 8px; /* Space between list items */
+    font-size: 0.95em;
+}
+
+/* Span for highlighting specific parts */
+.highlight { /* Class selector for span */
+    font-weight: bold;
+    background-color: var(--highlight-bg); /* Light blue background */
+    padding: 1px 4px;
+    border-radius: 3px;
+    /* display: inline; is default for span */
+}
+
+/* ------------------------- */
+/* Footer Styling            */
+/* ------------------------- */
+footer {
+    border-top: 1px solid var(--border-color);
+    padding-top: 20px;
+    margin-top: 30px;
+    text-align: center;
+    font-size: 0.9em;
+    color: #666;
+}
+
+footer a { /* Style links in the footer */
+    color: var(--primary-color);
+    text-decoration: none; /* Remove underline */
+}
+
+footer a:hover { /* Pseudo-class for hover effect */
+    text-decoration: underline; /* Add underline on hover */
+}
+
+/* ------------------------- */
+/* Basic Positioning Example (Subtle) */
+/* ------------------------- */
+/* Add a subtle relative position to section headers for potential future use */
+section h2 {
+    position: relative; /* Set positioning context */
+    /* Could add pseudo-elements ::before or ::after later using absolute positioning */
+}
+
+/* Example using 'display: inline-block' if needed, though block/flex are more common now */
+/* .some-inline-block-element { display: inline-block; margin: 5px; } */
+
+/* Note: Float and Clear are less used for layout now, Flexbox/Grid are preferred. */
+/* Note: Responsive design with media queries is not included as per instructions but would be the next step. */
