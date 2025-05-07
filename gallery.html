@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery - The Cozy Corner Café</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Optional: Add a lightbox library CSS if you implement one -->
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css"> -->
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">The Cozy Corner Café</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="menu.html">Menu</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container mt-5 pt-5 mb-5">
+        <h1 class="text-center my-4 page-title">A Glimpse Inside</h1>
+        <p class="text-center lead mb-5">Take a look at our cozy space, delicious treats, and happy moments.</p>
+
+        <div class="row gy-4"> <!-- gy-4 adds vertical gutter/spacing between rows of images -->
+            <div class="col-lg-4 col-md-6">
+                <a href="https://via.placeholder.com/800x600.png?text=Cafe+Interior+1" data-lightbox="cafe-gallery" data-title="Warm and inviting interior of The Cozy Corner Café">
+                    <img src="https://via.placeholder.com/400x300.png?text=Cafe+Interior+1" class="img-fluid rounded shadow gallery-img" alt="Cafe Interior View 1">
+                    <!-- Replace with actual image: <img src="images/gallery/cafe-interior-1.jpg" class="img-fluid rounded shadow gallery-img" alt="Cafe Interior View 1"> -->
+                </a>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <a href="https://via.placeholder.com/800x600.png?text=Coffee+Art" data-lightbox="cafe-gallery" data-title="Beautiful latte art crafted by our baristas">
+                    <img src="https://via.placeholder.com/400x300.png?text=Coffee+Art" class="img-fluid rounded shadow gallery-img" alt="Latte Art">
+                    <!-- Replace with actual image: <img src="images/gallery/latte-art.jpg" class="img-fluid rounded shadow gallery-img" alt="Latte Art"> -->
+                </a>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <a href="https://via.placeholder.com/800x600.png?text=Pastry+Display" data-lightbox="cafe-gallery" data-title="A tempting display of our freshly baked pastries">
+                    <img src="https://via.placeholder.com/400x300.png?text=Pastry+Display" class="img-fluid rounded shadow gallery-img" alt="Display of Fresh Pastries">
+                    <!-- Replace with actual image: <img src="images/gallery/pastry-display.jpg" class="img-fluid rounded shadow gallery-img" alt="Display of Fresh Pastries"> -->
+                </a>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <a href="https://via.placeholder.com/800x600.png?text=Happy+Customer" data-lightbox="cafe-gallery" data-title="A happy customer enjoying their coffee">
+                    <img src="https://via.placeholder.com/400x300.png?text=Happy+Customer" class="img-fluid rounded shadow gallery-img" alt="Happy Customer Enjoying Coffee">
+                    <!-- Replace with actual image: <img src="images/gallery/happy-customer.jpg" class="img-fluid rounded shadow gallery-img" alt="Happy Customer Enjoying Coffee"> -->
+                </a>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                 <a href="https://via.placeholder.com/800x600.png?text=Outdoor+Seating" data-lightbox="cafe-gallery" data-title="Our charming outdoor seating area">
+                    <img src="https://via.placeholder.com/400x300.png?text=Outdoor+Seating" class="img-fluid rounded shadow gallery-img" alt="Outdoor Seating Area">
+                    <!-- Replace with actual image: <img src="images/gallery/outdoor-seating.jpg" class="img-fluid rounded shadow gallery-img" alt="Outdoor Seating Area"> -->
+                </a>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <a href="https://via.placeholder.com/800x600.png?text=Close-up+Muffin" data-lightbox="cafe-gallery" data-title="A delicious close-up of one of our homemade muffins">
+                    <img src="https://via.placeholder.com/400x300.png?text=Close-up+Muffin" class="img-fluid rounded shadow gallery-img" alt="Close-up of a Muffin">
+                    <!-- Replace with actual image: <img src="images/gallery/muffin-closeup.jpg" class="img-fluid rounded shadow gallery-img" alt="Close-up of a Muffin"> -->
+                </a>
+            </div>
+            <!-- Add more images wrapped in <a> tags for lightbox if using -->
+        </div>
+    </main>
+
+    <footer class="bg-dark text-white text-center py-3">
+        <div class="container">
+            <p>© <span id="currentYear"></span> The Cozy Corner Café. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Optional: Add a lightbox library JS if you implement one -->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script> -->
+    <script src="js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,305 @@
+/* style.css for The Cozy Corner Café */
+
+:root {
+    --primary-color: #6F4E37; /* Coffee Brown - A rich, warm brown */
+    --secondary-color: #FFF8DC; /* Cream (Cornsilk) - Soft, off-white */
+    --accent-color: #A0522D; /* Sienna - A warm, earthy reddish-brown, like autumn leaves or cinnamon */
+    --light-tan-bg: #F5EADD; /* A very light, warm tan for subtle background sections */
+    --text-color: #4A4A4A; /* Dark Gray - Softer than pure black for body text */
+    --heading-color: var(--primary-color); /* Headings to use the primary coffee brown */
+    --light-text-color: #f8f9fa; /* For text on dark backgrounds */
+    --navbar-height: 60px; /* Adjust if your navbar height changes */
+    --font-primary: 'Georgia', serif; /* Classic, readable serif for body */
+    --font-headings: 'Verdana', sans-serif; /* Clean, modern sans-serif for headings */
+}
+
+body {
+    font-family: var(--font-primary);
+    color: var(--text-color);
+    padding-top: var(--navbar-height);
+    line-height: 1.7;
+    background-color: #FAF6F0; /* Very light, almost white, warm background for the page */
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-headings);
+    color: var(--heading-color);
+    margin-bottom: 0.75em;
+}
+
+.navbar-brand {
+    font-family: var(--font-headings);
+    font-weight: bold;
+}
+
+.page-title {
+    font-weight: bold;
+    margin-top: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+/* Navigation Bar */
+.navbar {
+    background-color: var(--primary-color) !important;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.navbar-brand {
+    font-size: 1.8rem; /* Slightly larger for better visibility */
+    color: var(--light-text-color) !important;
+}
+.navbar-brand:hover {
+    color: var(--secondary-color) !important;
+}
+
+.nav-link {
+    color: rgba(255, 255, 255, 0.85) !important;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+    font-size: 1.05rem;
+}
+.nav-link:hover, .nav-link.active {
+    color: var(--light-text-color) !important;
+    font-weight: 500; /* Slightly bolder for active/hover */
+}
+.navbar-toggler {
+    border-color: rgba(255,255,255,0.5);
+}
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 0.85%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+
+/* Hero Section (Homepage) */
+.hero-section {
+    /* Replace placeholder with a relevant, high-quality cafe image */
+    background: linear-gradient(rgba(40, 29, 20, 0.6), rgba(40, 29, 20, 0.6)), url('https://via.placeholder.com/1920x700.png?text=Cozy+Cafe+Atmosphere') no-repeat center center;
+    /* Example: background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('../images/hero-background.jpg') no-repeat center center; */
+    background-size: cover;
+    height: calc(85vh - var(--navbar-height)); /* Adjust height as needed */
+    min-height: 450px;
+    color: var(--light-text-color);
+    display: flex; /* For vertical centering of content */
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-section h1 {
+    font-size: clamp(2.5rem, 5vw, 3.8rem); /* Responsive font size */
+    font-weight: bold;
+    margin-bottom: 0.5em;
+    color: var(--light-text-color); /* Ensure heading color is light */
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+}
+
+.hero-section .lead {
+    font-size: clamp(1.1rem, 2.5vw, 1.4rem); /* Responsive font size */
+    margin-bottom: 1.5em;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Buttons */
+.btn {
+    padding: 0.6rem 1.5rem;
+    font-size: 1rem;
+    border-radius: 0.25rem; /* Softer edges */
+    transition: background-color 0.2s ease-in-out, border-color 0.2s ease-in-out;
+}
+.btn-accent {
+    background-color: var(--accent-color);
+    border-color: var(--accent-color);
+    color: var(--light-text-color);
+}
+.btn-accent:hover {
+    background-color: #88451d; /* Darker sienna */
+    border-color: #88451d;
+    color: var(--light-text-color);
+}
+
+.btn-primary-custom {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+    color: var(--light-text-color);
+}
+.btn-primary-custom:hover {
+    background-color: #5a3d2b; /* Darker coffee brown */
+    border-color: #5a3d2b;
+    color: var(--light-text-color);
+}
+
+
+/* Card Styles */
+.card {
+    border: 1px solid #E0D6CC; /* Softer border */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.08);
+}
+.card-title {
+    color: var(--heading-color); /* Consistent with other headings */
+    font-weight: 600; /* Slightly bolder */
+}
+.card img {
+    height: 200px;
+    object-fit: cover;
+}
+.card-body {
+    background-color: #FFFCF5; /* Very light cream for card body */
+}
+
+/* Background for sections */
+.bg-light-tan {
+    background-color: var(--light-tan-bg);
+    padding: 50px 0;
+}
+
+/* Testimonials */
+#testimonials-snippet .blockquote {
+    font-size: 1.15rem;
+    font-style: italic;
+}
+#testimonials-snippet .blockquote-footer {
+    color: var(--accent-color);
+    font-style: normal;
+}
+
+/* Menu Page */
+.menu-section-title {
+    color: var(--accent-color);
+    border-bottom: 2px solid var(--primary-color);
+    padding-bottom: 10px;
+    margin-bottom: 30px;
+    font-weight: 600;
+}
+
+.list-group-item {
+    background-color: transparent;
+    border-left: none;
+    border-right: none;
+    border-top: 1px solid #eee;
+    padding: 1rem 0.5rem; /* More padding */
+}
+.list-group-item:first-child {
+    border-top: none;
+}
+.list-group-item strong {
+    color: var(--text-color);
+}
+.list-group .text-muted {
+    font-size: 0.9rem;
+}
+
+/* About Us Page */
+#our-values .value-icon {
+    font-size: 3rem;
+    color: var(--accent-color);
+}
+
+/* Gallery Page */
+.gallery-img {
+    border: 3px solid var(--secondary-color); /* Nice frame */
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+.gallery-img:hover {
+    transform: scale(1.03);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+    border-color: var(--accent-color);
+}
+/* If using a lightbox, you might need styles for it */
+/* a[data-lightbox] img { cursor: pointer; } */
+
+/* Contact Page */
+#contactForm label {
+    font-weight: 600;
+    color: var(--primary-color);
+}
+.form-control:focus, .form-select:focus {
+    border-color: var(--accent-color);
+    box-shadow: 0 0 0 0.2rem rgba(160, 82, 45, 0.25); /* Accent color focus */
+}
+
+.map-responsive {
+    overflow:hidden;
+    padding-bottom:75%; /* Adjust aspect ratio (e.g. 75% for 4:3, 56.25% for 16:9) */
+    position:relative;
+    height:0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+.map-responsive iframe {
+    left:0;
+    top:0;
+    height:100%;
+    width:100%;
+    position:absolute;
+}
+
+
+/* Footer */
+footer {
+    background-color: #3E2723; /* Darker, richer brown for footer */
+    color: var(--light-text-color);
+    padding: 25px 0;
+}
+footer p {
+    margin-bottom: 0.5rem;
+}
+footer a {
+    color: var(--secondary-color);
+    text-decoration: none;
+}
+footer a:hover {
+    color: var(--light-text-color);
+    text-decoration: underline;
+}
+
+/* Utility Classes */
+.shadow {
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.08)!important; /* Softer shadow */
+}
+
+/* Responsive Adjustments */
+@media (max-width: 992px) {
+    .hero-section {
+        height: auto; /* Allow hero to shrink on tablets */
+        padding: 80px 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-section h1 {
+        font-size: clamp(2rem, 6vw, 3rem);
+    }
+    .hero-section .lead {
+        font-size: clamp(1rem, 3vw, 1.2rem);
+    }
+    .navbar-nav {
+        text-align: center; /* Center nav items when collapsed */
+    }
+    .nav-link {
+        padding: 0.8rem 1rem; /* More touch-friendly padding in collapsed menu */
+    }
+    .card img {
+        height: 180px;
+    }
+    .map-responsive {
+        padding-bottom:100%; /* Make map more square on smaller screens */
+    }
+}
+
+@media (max-width: 576px) {
+    .navbar-brand {
+        font-size: 1.5rem;
+    }
+    .page-title {
+        font-size: 1.8rem;
+    }
+    body {
+        padding-top: calc(var(--navbar-height) - 5px); /* Adjust if navbar wraps */
+    }
+}
